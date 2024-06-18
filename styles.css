@@ -1,0 +1,174 @@
+:root {
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --LightGreen: hsla(154, 59%, 51%, 0.7);
+  --Blue: hsl(248, 32%, 49%);
+  --DarkBlue: hsl(249, 10%, 26%);
+  --GrayishBlue: hsl(246, 25%, 77%);
+
+  font-size: 16px;
+  font-family: "Poppins";
+  color: white;
+}
+
+body {
+  background-image: url("images/bg-intro-desktop.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--Red);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-left,
+.container-right {
+  width: 500px;
+  margin: 30px;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.pop-out {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Blue);
+  width: 100%;
+  height: 60px;
+  border-radius: 15px;
+  font-weight: 400;
+  box-shadow: 0px 10px 0 -1px hsla(249, 10%, 26%, 0.3);
+  margin-bottom: 30px;
+}
+
+.pop-out p > span {
+  font-weight: 600;
+}
+
+.form-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: fit-content;
+  border-radius: 15px;
+  box-shadow: 0px 10px 0 -1px hsla(249, 10%, 26%, 0.3);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin-top: 30px;
+}
+
+.input-group{
+  width:100%;
+  position: relative;
+}
+
+.error-icon{
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+}
+
+input {
+  width: calc(100% - 20px);
+  height: 50px;
+  margin: 10px 0 10px 0;
+  border-radius: 5px;
+  border: 1px solid var(--GrayishBlue);
+  padding-left:20px;
+  color: var(--DarkBlue);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+input:focus{
+  outline-color: var(--Blue);
+}
+
+.error-text{
+  display: none;
+  font-style: italic;
+  font-size: 10px;
+  color: var(--Red);
+  margin-right:auto;
+}
+
+
+#submit {
+  width: 102%;
+  height: 50px;
+  margin: 10px 0 10px 0;
+  background-color: var(--Green);
+  color: white;
+  border-radius: 5px;
+  border: 2px solid var(--Green);
+  box-shadow: 0px 3px 1px -1px hsla(154, 64%, 26%, 0.7);
+  font-size: 16px;
+}
+
+#submit:hover{
+  background-color: var(--LightGreen);
+}
+
+footer {
+  color: var(--GrayishBlue);
+  font-size: 10px;
+  margin-bottom: 30px;
+}
+
+.t-and-cs {
+  color: var(--Red);
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 600px) {
+
+    maim{
+        max-width: 500px;
+    }
+  .container-left,
+  .container-right {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .pop-out {
+    height: 100px;
+  }
+
+  .pop-out > p{
+    margin: 10px 30px 10px 30px;
+    font-size: 14px;
+  }
+}
